@@ -14,7 +14,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 public final class WorldGenerators {
     public static final MyMinableGenerator myMinableGenerator = new MyMinableGenerator();
     public static final UpToDateWorldGenerator uptodateWorldGenerator = new UpToDateWorldGenerator();
-    private static final int WORLD_GENERATOR_PRIORITY = 100; //The smaller the number, the higher the priority.
+    private static final int WORLD_GENERATOR_PRIORITY = 100; //小さいほど優先度が高い
 
     private WorldGenerators() {
     }
@@ -25,7 +25,7 @@ public final class WorldGenerators {
         if (EnumDisableableFeatures.sweetBerry.featureEnabled()) BiomeDecorators.register(SweetBerryGenerator$.MODULE$);
         if (EnumDisableableFeatures.flower.featureEnabled()) {
             BiomeDecorators.register(FlowerGenerator$.MODULE$);
-            //Allows additional flowers to be generated when bonemeal is sprinkled
+            // 骨粉を撒いたときに追加の花が生成されるようにする
             BiomeGenBase.plains.addFlower(MyBlocks.flower, BlockNewFlower.CORNFLOWER, 3);
             BiomeGenBase.getBiome(BiomeGenBase.forest.biomeID + 128).addFlower(MyBlocks.flower, BlockNewFlower.LILY, 10);  // forest.biomeID+128 は Flower Forest バイオーム
         }

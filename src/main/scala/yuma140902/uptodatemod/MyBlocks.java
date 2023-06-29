@@ -183,13 +183,14 @@ public final class MyBlocks {
     private static List<Block> list = new ArrayList<Block>();
 
     /*
-       The static initializer of MyItems is called,
-     * Because the value of the variable becomes null at an unexpected timing,
-     * Don't refer to MyItems property in MyBlocks static initializer.
-     * Also, do not refer to the MyItems property in each block's constructor.
+     * !!! 注意 !!!
+     * MyItemsのstaticイニシャライザが呼ばれてしまい、
+     * 予期しないタイミングで変数の値がnullになってしまうため、
+     * MyBlocksのstaticイニシャライザでMyItemsのプロパティを参照してはいけない。
+     * また、各ブロックのコンストラクタでもMyItemsのプロパティを参照してはいけない。
      */
     /*
-     * MyBlocks static initializer should be executed before MyItems static initializer
+     * MyBlocksのstaticイニシャライザはMyItemsのstaticイニシャライザよりも先に実行されるようにすること
      */
     static {
         ModUpToDateMod.LOGGER.info("Blocks init");
