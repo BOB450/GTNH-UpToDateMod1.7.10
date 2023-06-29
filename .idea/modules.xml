@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/UpToDateMod1.7.10.api.iml" filepath="$PROJECT_DIR$/.idea/modules/UpToDateMod1.7.10.api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/UpToDateMod1.7.10.main.iml" filepath="$PROJECT_DIR$/.idea/modules/UpToDateMod1.7.10.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UpToDateMod1.7.10.test.iml" filepath="$PROJECT_DIR$/.idea/modules/UpToDateMod1.7.10.test.iml" />
     </modules>
   </component>
 </project>
